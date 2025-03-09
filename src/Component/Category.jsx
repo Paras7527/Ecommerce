@@ -6,7 +6,7 @@ const Category = ({ item, selectedCategory, setSelectedCategory }) => {
     return (
         <TouchableOpacity onPress={()=>setSelectedCategory(item)}>
             <Text style={[styles.Category, selectedCategory === item &&
-                { color: "#FFFFFF", backgroundColor: "#71c3ff" }]}>
+                { color: "#FFFFFF", backgroundColor: "#ff6ee7" }]}>
                 {item}
             </Text>
         </TouchableOpacity>

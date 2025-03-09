@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
-import Header from '../Component/Header';
+import Headerr from '../Component/Header';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Category from '../Component/Category';
 import { FlatList } from 'react-native';
