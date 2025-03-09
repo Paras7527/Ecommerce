@@ -1,0 +1,124 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "image": "https://img.freepik.com/free-photo/beautiful-woman-purple-sweater-skirt_1303-17488.jpg?t=st=1741436829~exp=1741440429~hmac=f317bbd9a550d077b6d64d03fcd968c927903b0531cc7453560f16774f7ee823&w=740",
+            "title": "Sweat shirt",
+            "price": 49.99
+        },
+        {
+            "id": 2,
+            "image": "https://www.shutterstock.com/image-photo/confident-young-african-american-female-600nw-2258698735.jpg",
+            "title": "Jacket",
+            "price": 39.99
+        },
+        {
+            "id": 3,
+            "image": "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "title": "Jacket",
+            "price": 29.99
+        },
+        {
+            "id": 4,
+            "image": "https://img.freepik.com/free-photo/high-fashion-look-glamor-closeup-portrait-beautiful-sexy-stylish-young-woman-model-with-bright-makeup-with-perfect-clean-skin-casual-cloth-hat_158538-9315.jpg?semt=ais_hybrid",
+            "title": "Winter Coat",
+            "price": 99.99
+        },
+        {
+            "id": 5,
+            "image": "https://images.pexels.com/photos/15739748/pexels-photo-15739748/free-photo-of-a-woman-sitting-on-a-couch-with-her-hands-on-her-chest.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Jacket",
+            "price": 59.99
+        },
+        {
+            "id": 6,
+            "image": "https://images.pexels.com/photos/10055278/pexels-photo-10055278.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Top with Coat",
+            "price": 149.99
+        },
+        {
+            "id": 7,
+            "image": "https://images.pexels.com/photos/30953557/pexels-photo-30953557/free-photo-of-colorful-knitwear-portrait-in-villa-de-leyva.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "title": "Sweat shirt",
+            "price": 79.99
+        },
+        {
+            "id": 8,
+            "image": "https://images.pexels.com/photos/30758231/pexels-photo-30758231/free-photo-of-fashionable-woman-in-blue-faux-fur-jacket.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Blue Winter jacket",
+            "price": 49.99
+        },
+        {
+            "id": 9,
+            "image": "https://images.pexels.com/photos/2705753/pexels-photo-2705753.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Sweater With Shirt",
+            "price": 39.99
+        },
+        {
+            "id": 10,
+            "image": "https://images.pexels.com/photos/17839085/pexels-photo-17839085/free-photo-of-a-woman-in-a-black-suit-and-white-sneakers-sitting-on-a-bench.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "title": "Formal Coat",
+            "price": 129.99
+        },
+        {
+            "id": 11,
+            "image": "https://images.pexels.com/photos/28302556/pexels-photo-28302556/free-photo-of-a-woman-in-boots-sitting-on-a-chair.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Sweatshirt",
+            "price": 19.99
+        },
+        {
+            "id": 12,
+            "image": "https://images.pexels.com/photos/17839174/pexels-photo-17839174/free-photo-of-a-woman-in-a-white-shirt-and-black-pants-leaning-against-a-wall.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Denim Jacket",
+            "price": 69.99
+        },
+        {
+            "id": 13,
+            "image": "https://images.pexels.com/photos/15647593/pexels-photo-15647593/free-photo-of-a-woman-in-a-coat-and-skirt-posing-for-a-photo.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Hoodie",
+            "price": 29.99
+        },
+        {
+            "id": 14,
+            "image": "https://images.pexels.com/photos/952213/pexels-photo-952213.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Black Jeans",
+            "price": 59.99
+        },
+        {
+            "id": 15,
+            "image": "https://images.pexels.com/photos/8250265/pexels-photo-8250265.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Cable-Knit Sweater",
+            "price": 49.99
+        },
+        {
+            "id": 16,
+            "image": "https://images.pexels.com/photos/15647539/pexels-photo-15647539/free-photo-of-a-woman-in-a-red-and-brown-striped-top.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Peacoat",
+            "price": 89.99
+        },
+        {
+            "id": 17,
+            "image": "https://images.pexels.com/photos/29857177/pexels-photo-29857177/free-photo-of-young-girl-posing-in-cozy-fashion-indoors.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Flannel Shirt",
+            "price": 34.99
+        },
+        {
+            "id": 18,
+            "image": "https://images.pexels.com/photos/8410823/pexels-photo-8410823.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Windbreaker",
+            "price": 59.99
+        },
+        {
+            "id": 19,
+            "image": "https://images.pexels.com/photos/6740808/pexels-photo-6740808.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Puffer Jacket",
+            "price": 119.99
+        },
+        {
+            "id": 20,
+            "image": "https://images.pexels.com/photos/2191045/pexels-photo-2191045.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Ripped Jeans",
+            "price": 69.99
+        }
+    ]
+}

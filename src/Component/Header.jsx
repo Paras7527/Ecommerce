@@ -1,7 +1,7 @@
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 
-const Header = () => {
+const Headerr = () => {
   return (
     <View style={styles.container}>
       <View style={styles.appImageContainer}>
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
     top: 60,
-    left: 0, // Align to the left edge
+    left: 7, // Align to the left edge
     marginLeft: 10,
   },
   appImageContainer: {

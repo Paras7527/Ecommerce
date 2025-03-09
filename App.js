@@ -4,13 +4,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React from 'react'
 import HomeScreen from './src/Screen/HomeScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ProductDetailsScreen from './src/Screen/ProductDetailsScreen';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 function Home() {
   return (
     <View>
-      
+
       <Text>Home</Text>
     </View>
 
@@ -37,6 +40,15 @@ function Account() {
     </View>
   )
 }
+const MyHomeStack = () => {
+  return (
+    <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='PRODUCT_DETAILS'>
+      <Stack.Screen name="HOME" component={HomeScreen}/>
+      <Stack.Screen name="PRODUCT_DETAILS" component={ProductDetailsScreen}/>
+
+    </Stack.Navigator>
+  )
+}
 const App = () => {
   return (
     <NavigationContainer>
@@ -45,7 +57,7 @@ const App = () => {
         tabBarShowLabel: false,
         tabBarActiveTintColor: "#ffbaba",
       }}>
-        <Tab.Screen name="HOME" component={HomeScreen} options={{
+        <Tab.Screen name="HOME_STACK" component={MyHomeStack} options={{
           tabBarIcon: () => {
             return (
               <Icon name={"home"} size={25} />
