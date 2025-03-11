@@ -4,7 +4,6 @@ import { LinearGradient } from 'expo-linear-gradient'
 import Headerr from '../Component/Header'
 import { useState } from 'react'
 import { useRoute } from '@react-navigation/native'
-import { FlatList } from 'react-native-gesture-handler'
 
 const sizes = ['S', 'M', 'L', 'XL']
 const colorsArray = ['#a0e100', '#6029fc', '#eb313a', '#585b52', '#006b69']
@@ -89,6 +88,7 @@ const styles = StyleSheet.create({
     marginRight: 40,
     marginTop: 20,
     justifyContent: "space-between",
+    
   },
   sizevalueconatiner: {
     height: 36,
@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
     color: "#4D4C4C",
     fontWeight: "bold",
     marginTop: 10,
+    justifyContent:"center"
   },
   colorText: {
     marginTop: 20,

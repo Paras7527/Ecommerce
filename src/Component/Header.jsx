@@ -1,13 +1,17 @@
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const Headerr = () => {
+const Headerr = ({isCart}) => {
   return (
     <View style={styles.container}>
       <View style={styles.appImageContainer}>
-        <Image source={require('../../assets/app.png')} style={styles.appImage} />
+        {
+          isCart ? <Ionicons name={"chevron-back"} color={"#ff6ee7"} size={25}/>:
+          <Image source={require('../../assets/app.png')} style={styles.appImage} />
+        }
       </View>
-      <View style={styles.dpImageContainer}>
+      <View>
         <Image source={require('../../assets/dp.jpg')} style={styles.dpImage} />
       </View>
     </View>
@@ -20,40 +24,26 @@ const styles = StyleSheet.create({
   container: {
     height: 44,
     width: Dimensions.get('window').width, // Full width of the screen
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: "space-between",
     position: "absolute",
     top: 60,
-    left: 7, // Align to the left edge
-    marginLeft: 10,
+    paddingHorizontal: 15,
   },
   appImageContainer: {
-    position: "absolute",
-    top: 0,
-    left: 0,
     padding: 8,
-    backgroundColor: "white",
     borderRadius: 20,
+    alignSelf: 'flex-start',
   },
   appImage: {
     width: 28,
     height: 28,
   },
-  dpImageContainer: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    padding: 3,
-    backgroundColor: "white", 
-    borderRadius: 30,
-    marginRight: 30,
-    alignItems: "center",
-    justifyContent: "center",
-  },
   dpImage: {
     width: 45,
     height: 45,
     borderRadius: 20,
-    
+    alignSelf: 'flex-start',
+    marginLeft: 10,
   },
 });

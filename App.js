@@ -6,6 +6,7 @@ import React from 'react'
 import HomeScreen from './src/Screen/HomeScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ProductDetailsScreen from './src/Screen/ProductDetailsScreen';
+import CartScreen from './src/Screen/CartScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -45,7 +46,6 @@ const MyHomeStack = () => {
     <Stack.Navigator screenOptions={{headerShown:false}}>
       <Stack.Screen name="HOME" component={HomeScreen}/>
       <Stack.Screen name="PRODUCT_DETAILS" component={ProductDetailsScreen}/>
-
     </Stack.Navigator>
   )
 }
@@ -57,6 +57,7 @@ const App = () => {
         tabBarShowLabel: false,
         tabBarActiveTintColor: "#ffbaba",
       }}>
+        
         <Tab.Screen name="HOME_STACK" component={MyHomeStack} options={{
           tabBarIcon: () => {
             return (
@@ -71,7 +72,7 @@ const App = () => {
             )
           }
         }} />
-        <Tab.Screen name="CART" component={Cart} options={{
+        <Tab.Screen name="CART" component={CartScreen} options={{
           tabBarIcon: () => {
             return (
               <Icon name={"shopping-cart"} size={25} />
