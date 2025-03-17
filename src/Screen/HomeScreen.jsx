@@ -24,7 +24,7 @@ const HomeScreen = () => {
     setProducts(newProducts);
   }
   return (
-    <LinearGradient colors={['#f8cbfb', '#FFFFFF']} style={styles.linearGradient} >
+    <LinearGradient colors={['#f8cbfb', '#FFFFFF']} style={styles.Container}>
       <Headerr />
       <FlatList
         numColumns={2}
@@ -53,8 +53,9 @@ const HomeScreen = () => {
 export default HomeScreen
 
 const styles = StyleSheet.create({
-  linearGradient: {
-    padding: 20,
+  Container: {
+    flex: 1,
+    padding: 15,
   },
   buttonText: {
     fontSize: 18,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   matchText: {
     fontSize: 28,
     color: "#000",
-    marginTop: 100,
+    marginTop: 30,
     fontWeight: 600,
   },
   InputContainer: {

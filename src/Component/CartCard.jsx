@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 
@@ -17,7 +17,9 @@ const CartCard = () => {
                     </View>
                 </SafeAreaView>
             </SafeAreaView>
-            <FontAwesome6 name={"trash"} size={20} color={"#ff6ee7"} marginHorizontal={20} />
+            <TouchableOpacity>
+                <FontAwesome6 name={"trash"} size={20} color={"#ff6ee7"} marginHorizontal={20} />
+            </TouchableOpacity>
         </SafeAreaView>
     )
 }
@@ -26,13 +28,13 @@ export default CartCard
 
 const styles = StyleSheet.create({
     Container: {
-        marginLeft: 20,
+        marginLeft: 10,
         flexDirection: "row",
         alignItems: "center",
         marginVertical: 10,
     },
     coverimage: {
-        width: "25%",
+        width: "30%",
         height: 170,
         borderRadius: 10,
     },
@@ -75,6 +77,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: "#fff",
         fontWeight: 600,
+        
     }
 
 })

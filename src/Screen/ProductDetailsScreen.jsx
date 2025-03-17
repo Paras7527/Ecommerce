@@ -1,23 +1,26 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import Headerr from '../Component/Header'
 import { useState } from 'react'
 import { useRoute } from '@react-navigation/native'
+import { CartContext } from '../Context/CartContext'
 
 const sizes = ['S', 'M', 'L', 'XL']
 const colorsArray = ['#a0e100', '#6029fc', '#eb313a', '#585b52', '#006b69']
 
 const ProductDetailsScreen = () => {
+  const {AddtoCart}=useContext(CartContext);
   const route = useRoute();
   const item = route.params?.item || {};
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
+  const handelAddtoCart = (item) => {
+    AddtoCart(item);
+  }
   return (
-    <LinearGradient colors={['#f8cbfb', '#FFFFFF']} style={styles.linearGradient}>
-      <View style={styles.Headerrcontainer}>
-        
-      </View>
+    <LinearGradient colors={['#f8cbfb', '#FFFFFF']} style={styles.Container}>
+      <Headerr/>
       <Image source={{ uri: item.image }} style={styles.coverimage} />
       <View style={styles.contentcontainer}>
         <Text style={styles.title}>{item.title}</Text>
@@ -40,7 +43,7 @@ const ProductDetailsScreen = () => {
           </View>
         ))}
       </View>
-      <TouchableOpacity style={styles.Button}>
+      <TouchableOpacity style={styles.Button} onPress={()=>handelAddtoCart(item)}>
         <Text style={styles.buttonText}>Add to Cart</Text>
       </TouchableOpacity>
     </LinearGradient>
@@ -50,8 +53,9 @@ const ProductDetailsScreen = () => {
 export default ProductDetailsScreen
 
 const styles = StyleSheet.create({
-  linearGradient: {
+  Container: {
     flex: 1,
+    padding: 15,
   },
   Headerrcontainer: {
     padding: 20,
