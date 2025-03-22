@@ -3,17 +3,17 @@ import React from 'react'
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 
 const ImageURI = "https://images.pexels.com/photos/1457983/pexels-photo-1457983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-const CartCard = () => {
+const CartCard = ({item}) => {
     return (
         <SafeAreaView style={styles.Container}>
-            <Image source={{ uri: ImageURI }} style={styles.coverimage} marginTop={20} />
+            <Image source={{ uri: item.image }} style={styles.coverimage} marginTop={20} />
             <SafeAreaView style={styles.CartContent}>
-                <Text style={styles.title}>Jacket Jeans</Text>
-                <Text style={styles.price}>$37.9</Text>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.price}>${item.price}</Text>
                 <SafeAreaView style={styles.CircleSizeContainer}>
-                    <View style={styles.circle} />
+                    <View style={[styles.circle]} />
                     <View style={styles.sizecircle}>
-                        <Text style={styles.SizeText}>L</Text>
+                        <Text style={styles.SizeText}>L{item.size}</Text>
                     </View>
                 </SafeAreaView>
             </SafeAreaView>

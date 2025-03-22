@@ -3,20 +3,25 @@ import React, { useContext } from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import Headerr from '../Component/Header'
 import { useState } from 'react'
-import { useRoute } from '@react-navigation/native'
+import { useNavigation, useRoute } from '@react-navigation/native'
 import { CartContext } from '../Context/CartContext'
 
 const sizes = ['S', 'M', 'L', 'XL']
 const colorsArray = ['#a0e100', '#6029fc', '#eb313a', '#585b52', '#006b69']
 
 const ProductDetailsScreen = () => {
+  const navigation=useNavigation();
   const {AddtoCart}=useContext(CartContext);
   const route = useRoute();
   const item = route.params?.item || {};
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
   const handelAddtoCart = (item) => {
+    item.size = selectedSize;
+    item.color = selectedColor;
     AddtoCart(item);
+    navigation.navigate('CART');
+    
   }
   return (
     <LinearGradient colors={['#f8cbfb', '#FFFFFF']} style={styles.Container}>

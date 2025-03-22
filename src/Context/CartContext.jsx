@@ -1,34 +1,53 @@
-import { createContext, useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { createContext, use, useState } from "react";
+import { useEffect } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  // Initialize with empty array instead of [1,2]
   const [carts, setCarts] = useState([]);
+  useEffect(() => {fetchCart}, []);
+    const fetchCart = async () => {
+      try {
+        const carts = await AsyncStorage.getItem("carts");
+        if (carts) {
+          setCarts(JSON.parse(carts));
+        }
+      } catch (error) {
+        console.error("Error fetching cart:", error);
+      }
+    };
+    fetchCart();
   
-  const AddtoCart = (item) => {
-    const itemExist = carts.findIndex((cart) => cart.id === item.id);
-    
-    if (itemExist !== -1) {
-      // Item exists in cart, update quantity
-      const newCart = [...carts];
-      newCart[itemExist] = {
-        ...newCart[itemExist],
-        quantity: newCart[itemExist].quantity + 1
-      };
-      setCarts(newCart);
-    } else {
-      // Item doesn't exist in cart, add it
-      setCarts([...carts, { ...item, quantity: 1 }]);
+
+  const AddtoCart = async (item) => {
+    try {
+      const itemExist = carts.findIndex((cart) => cart.id === item.id);
+
+      if (itemExist !== -1) {
+        // Item exists, update quantity
+        const newCart = [...carts];
+        newCart[itemExist] = {
+          ...newCart[itemExist],
+          quantity: newCart[itemExist].quantity + 1,
+        };
+        setCarts(newCart);
+        await AsyncStorage.setItem("cart", JSON.stringify(newCart));
+      } else {
+        // Item doesn't exist, add it
+        const updatedCart = [...carts, { ...item, quantity: 1 }];
+        setCarts(updatedCart);
+        await AsyncStorage.setItem("cart", JSON.stringify(updatedCart));
+      }
+    } catch (error) {
+      console.error("Error adding to cart:", error);
     }
   };
-  
+
   const value = {
     carts,
     AddtoCart,
   };
-  
-  return (
-    <CartContext.Provider value={value}>{children}</CartContext.Provider>
-  );
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };

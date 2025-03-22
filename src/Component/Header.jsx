@@ -2,6 +2,7 @@ import { View, Image, StyleSheet, Dimensions, Text } from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+
 const Headerr = ({ isCart }) => {
   return (
     <View style={styles.container}>

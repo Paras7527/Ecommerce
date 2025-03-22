@@ -3,14 +3,17 @@ import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import Headerr from '../Component/Header'
 import CartCard from '../Component/CartCard'
+import { useContext } from 'react'
+import { CartContext } from '../Context/CartContext'
 
 const CartScreen = () => {
+  const { carts } = useContext(CartContext);
   return (
     <LinearGradient colors={['#f8cbfb', '#FFFFFF']} style={styles.Container}>
       <View style={styles.headercontainer}>
       <Headerr isCart={true}/>
       </View>
-      <FlatList data={[1, 2, 2, 4, 5, 5]}
+      <FlatList data={carts}
         ListFooterComponent={<>
           <View style={styles.priceContainer}>
             <View style={styles.priceAndTitle}>

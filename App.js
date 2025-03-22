@@ -61,7 +61,7 @@ const App = () => {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarActiveTintColor: "#ffbaba",
-        }} initialRouteName='CART'>
+        }}>
 
           <Tab.Screen name="HOME_STACK" component={MyHomeStack} options={{
             tabBarIcon: () => {
