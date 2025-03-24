@@ -9,7 +9,7 @@ const Headerr = ({ isCart }) => {
       <View style={styles.appiconContainer}>
         <Image source={require("../assets/appicon.png")} style={styles.appicon}/>
       </View>
-      <Image source={require("../assets/DP.png")} style={styles.DP}/>
+      <Image source={require("../assets/Paras.jpeg")} style={styles.DP}/>
     </View>
   );
 };
@@ -34,6 +34,8 @@ const styles = StyleSheet.create({
     height:44,
     width:44,
     borderRadius:22,
+    borderColor:"#c34c91",
+    borderWidth:2,
   },
   container:{
     flexDirection:"row",

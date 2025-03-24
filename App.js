@@ -10,6 +10,7 @@ import CartScreen from './src/Screen/CartScreen';
 import { CartProvider } from './src/Context/CartContext';
 import { useContext } from 'react';
 import { CartContext } from './src/Context/CartContext';
+import ProfileScreen from './src/Screen/ProfileScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -105,7 +106,7 @@ const App = () => {
               )
             }
           }} />
-          <Tab.Screen name="ACCOUNT" component={Account} options={{
+          <Tab.Screen name="ACCOUNT" component={ProfileScreen} options={{
             tabBarIcon: () => {
               return (
                 <Icon name={"user"} size={25} />
