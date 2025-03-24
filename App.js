@@ -16,36 +16,6 @@ import ProfileScreen from './src/Screen/ProfileScreen';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-function Home() {
-  return (
-    <View>
-
-      <Text>Home</Text>
-    </View>
-
-  )
-}
-function Reorder() {
-  return (
-    <View>
-      <Text>Reorder</Text>
-    </View>
-  )
-}
-function Cart() {
-  return (
-    <View>
-      <Text>Reorder</Text>
-    </View>
-  )
-}
-function Account() {
-  return (
-    <View>
-      <Text>Reorder</Text>
-    </View>
-  )
-}
 const MyHomeStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -71,13 +41,7 @@ const App = () => {
               )
             }
           }} />
-          <Tab.Screen name="REORDER" component={Reorder} options={{
-            tabBarIcon: () => {
-              return (
-                <Icon name={"reorder"} size={25} />
-              )
-            }
-          }} />
+          
           <Tab.Screen name="CART" component={CartScreen} options={{
             tabBarIcon: () => {
               const { cart } = useContext(CartContext);
