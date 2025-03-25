@@ -2,9 +2,11 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons, MaterialIcons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 
 const ProfileScreen = () => {
+    const navigation = useNavigation();
     const settingsData = [
         { id: '1', icon: <Ionicons name="person" size={22} color="#c34c91" />, text: 'Edit Profile' },
         { id: '2', icon: <FontAwesome name="credit-card" size={20} color="#c34c91" />, text: 'Saved Credit/Debit & Gift Cards' },
@@ -39,22 +41,22 @@ const ProfileScreen = () => {
                         <View style={styles.boxesContainer}>
                             {/* First row */}
                             <View style={styles.row}>
-                                <TouchableOpacity style={styles.box}>
+                                <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('MyOrderScreen')}>
                                     <Text style={styles.boxText}>My Orders</Text>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.box}>
+                                <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Wishlist')}>
                                     <Text style={styles.boxText}>Wishlist</Text>
                                 </TouchableOpacity>
                             </View>
 
                             {/* Second row */}
                             <View style={styles.row}>
-                                <TouchableOpacity style={styles.box}>
+                                <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('Coupons')}>
                                     <Text style={styles.boxText}>Coupons</Text>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.box}>
+                                <TouchableOpacity style={styles.box} onPress={() => navigation.navigate('HelpCenter')}>
                                     <Text style={styles.boxText}>Help Center</Text>
                                 </TouchableOpacity>
                             </View>
@@ -87,7 +89,7 @@ const styles = StyleSheet.create({
         height: 150,
         borderRadius: 85,
         borderColor: "#c34c91",
-        borderWidth:2,
+        borderWidth: 2,
 
     },
     profileText: {
@@ -151,8 +153,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#c34c91',
         paddingLeft: 5,
-        marginTop:15,
-        marginLeft:120,
+        marginTop: 15,
+        marginLeft: 120,
     },
     settingsItem: {
         flexDirection: 'row',
@@ -174,10 +176,10 @@ const styles = StyleSheet.create({
         flex: 1,
         fontSize: 15,
         color: '#333',
-        marginLeft:15,
+        marginLeft: 15,
     },
     arrowIcon: {
-        marginRight:20,
+        marginRight: 20,
     },
 
 })

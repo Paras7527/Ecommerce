@@ -10,17 +10,28 @@ import CartScreen from './src/Screen/CartScreen';
 import { CartProvider } from './src/Context/CartContext';
 import { useContext } from 'react';
 import { CartContext } from './src/Context/CartContext';
+import { createStackNavigator } from '@react-navigation/stack';
 import ProfileScreen from './src/Screen/ProfileScreen';
+import MyOrderScreen from './src/Screen/MyOrderScreen';
+import WishlistScreen from './src/Screen/WishlistScreen';
+import CouponsScreen from './src/Screen/CouponsScreen';
+import HelpCenterScreen from './src/Screen/HelpCenterScreen';
 
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+const Stack1 = createStackNavigator();
 
 const MyHomeStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HOME" component={HomeScreen} />
       <Stack.Screen name="PRODUCT_DETAILS" component={ProductDetailsScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen}/>
+      <Stack1.Screen name="MyOrders" component={MyOrderScreen}/>
+      <Stack1.Screen name="Wishlist" component={WishlistScreen}/>
+      <Stack1.Screen name="Coupons" component={CouponsScreen}/>
+      <Stack1.Screen name="HelpCenter" component={HelpCenterScreen}/>
     </Stack.Navigator>
   )
 }
@@ -41,7 +52,7 @@ const App = () => {
               )
             }
           }} />
-          
+
           <Tab.Screen name="CART" component={CartScreen} options={{
             tabBarIcon: () => {
               const { cart } = useContext(CartContext);
@@ -83,7 +94,6 @@ const App = () => {
 
   )
 }
-
 export default App;
 
 const styles = StyleSheet.create({})
